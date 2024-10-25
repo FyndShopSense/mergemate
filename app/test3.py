@@ -6,6 +6,6 @@ Base = declarative_base()
 
 def create_connection(db_url):
     engine = create_engine(db_url)
-    Base.metadata.bind = engine
-    session = sessionmaker(bind=engine)()
-    return session
+    base.metadata.bind = engine
+    dbsession = sessionmaker(bind=engine)
+    return dbsession()
