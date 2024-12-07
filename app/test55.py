@@ -9,7 +9,7 @@ class BinarySearchTree:
         self.root = None
 
     def insert(self, key):
-        if self.root is None:
+        if not self.root:
             self.root = TreeNode(key)
         else:
             self._insert(self.root, key)
